@@ -20,7 +20,7 @@ export default function Team() {
                     whileTap={{ scale: 0.9 }}
 
                     className="bg-gray-800 p-4 cursor-pointer border rounded-lg">
-                        <img src="https://avatars.githubusercontent.com/u/132995280?v=4" className="w-full object-contain object-top rounded-lg" />
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQH0bfaOG9LiSg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726282196088?e=1732752000&v=beta&t=Sa1IXutT_O3c3QYjEECTcRW2hO506WsPuh1OsoI7Hrs" className="w-full object-contain object-top rounded-lg" />
 
                         <div className="text-center mt-4">
                             <h4 className="text-base font-semibold text-white">Arman Mondal</h4>
