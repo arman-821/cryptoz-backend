@@ -8,7 +8,7 @@ export default function Home() {
     const [count, setCount] = React.useState(10);
    
     const handleGenerate = () => {
-        axios.post(`http://localhost:3001/generate?count=${count}`, {
+        axios.post(`https://randomapi.armanm.tech/generate?count=${count}`, {
             responseType: 'blob'
         })
         .then((response:any) => {
