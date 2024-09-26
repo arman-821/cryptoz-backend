@@ -3,6 +3,7 @@ import HomeAnimation from '../Assets/Animations/HomeAnimation.json'
 import Lottie from 'react-lottie-player'
 import { ArrowRight, ChevronDown, ChevronRight } from 'lucide-react'
 import axios from 'axios';
+import {motion} from 'framer-motion';
 export default function Home() {
     const [additionalSettingsOn, setAdditionalSettingsOn] = React.useState(false);
     const [count, setCount] = React.useState(10);
@@ -28,9 +29,22 @@ export default function Home() {
     <div className=''>
 <div className="max-w-[85rem] min-h-[90vh] items-center flex mx-auto px-4 sm:px-6 lg:px-8">
   <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
-    <div className="lg:col-span-3">
-      <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">Genarate Random Details</h1>
-      <p className="mt-3 text-lg text-gray-800">Get Some Random User Data</p>
+    <motion.div 
+     initial={{ opacity: 0, x: -200 }}
+     animate={{ opacity: 1, x: 0 }}
+     transition={{ delay: 0.1 }}
+     
+    className="lg:col-span-3">
+      <motion.h1 
+      initial={{ opacity: 0, x: -200 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.1 }}
+
+      className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">Genarate Random Details</motion.h1>
+      <motion.p
+       
+      
+      className="mt-3 text-lg text-gray-800">Get Some Random User Data</motion.p>
 
       <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
         <div className="w-full sm:w-auto flex flex-col gap-5">
@@ -52,7 +66,7 @@ export default function Home() {
         <button onClick={handleGenerate} className="mt-5 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Generate Data</button>
         </div>
 
-    </div>
+    </motion.div>
 
     <div className="lg:col-span-4 mt-10 lg:mt-0 flex justify-center items-center">
     <Lottie
